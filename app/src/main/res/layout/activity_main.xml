@@ -78,6 +78,7 @@
         android:layout_marginStart="8dp"
         android:text="About"
         android:textAlignment="center"
+        android:textColor="#fff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +93,7 @@
         android:layout_marginStart="16dp"
         android:text="Settings"
         android:textAlignment="center"
+        android:textColor="#fff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

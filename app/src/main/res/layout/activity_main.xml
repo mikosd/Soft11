@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mikos.soft11.MainActivity"
+    android:id="@+id/relativeLayout">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/chips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:src="@drawable/redbutton"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:src="@drawable/redbutton"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="421dp" />
+
+    <ImageButton
+        android:id="@+id/aboutButton"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:src="@drawable/redbutton" />
+
+    <TextView
+        android:id="@+id/playButton_tv"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="PLAY"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/settings_tv"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/about_tv"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="About"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+</android.support.constraint.ConstraintLayout>

@@ -16,7 +16,6 @@ public class MainActivity extends Activity {
         button = findViewById(R.id.button_about);
         button = findViewById(R.id.button_settings);
 
-
     }
 
 }

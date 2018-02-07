@@ -55,7 +55,6 @@ public class BlackJack{
             char [] suits = {'S','H','C','D'};
             String [] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
             int [][] weights = {{1,11},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
-            //cards = new Card[52];
             int count = 0;
             for (int i=0; i < 4;i++)
             {

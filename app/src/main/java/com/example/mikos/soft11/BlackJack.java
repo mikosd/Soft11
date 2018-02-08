@@ -105,7 +105,7 @@ public class BlackJack{
     public class Player{
         private String name;
         private int chips;
-        private ArrayList<ArrayList<Card>> hands;
+        private ArrayList<Card> hands;
         /*
         * The constructor for player. This creates a player with a blank hand, using a name and a
         * starting amount of chips
@@ -113,15 +113,15 @@ public class BlackJack{
         public Player(String name, int chips){
             this.name = name;
             this.chips = chips;
-            hands = new ArrayList<ArrayList<>>();
+            hands = new ArrayList<>();
         }
         /*
         * draw_from is a functions that takes two arguments, A Deck object, and an integer representing
         * a hand. Draw adds a card from the top of the deck (Using the Decks 'draw' function) and adds
         * it to the specified hand. It returns nothing.
         * */
-        public void draw_from(Deck d, int hand){
-            hands.get(hand).add(d.draw());
+        public void draw_from(Deck d){
+            hands.add(d.draw());
 
         }
         /*The player can win a specified amount of chips. win_chips adds the integer argument of

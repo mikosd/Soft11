@@ -54,8 +54,8 @@ public class BlackJack{
         public Deck()
         {
             String [] suits = {"Spades","Hearts","Clubs","Diamonds"};
-            String [] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-            int [][] weights = {{1,11},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
+            String [] values = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
+            int [][] weights = {{11,1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
             cards = new ArrayList<>(52);
             for (int i=0; i < 4;i++)
             {
@@ -106,6 +106,8 @@ public class BlackJack{
         private String name;
         private int chips;
         private ArrayList<Card> hands;
+        private boolean hasAce;
+        private int numAce;
         /*
         * The constructor for player. This creates a player with a blank hand, using a name and a
         * starting amount of chips
@@ -114,6 +116,8 @@ public class BlackJack{
             this.name = name;
             this.chips = chips;
             hands = new ArrayList<>();
+            hasAce = false;
+            numAce=0;
         }
         /*
         * draw_from is a functions that takes two arguments, A Deck object, and an integer representing
@@ -121,7 +125,12 @@ public class BlackJack{
         * it to the specified hand. It returns nothing.
         * */
         public void draw_from(Deck d){
-            hands.add(d.draw());
+            Card t = d.draw();
+            hands.add(t);
+            if(t.value.equals("Ace")){
+                hasAce = true;
+                numAce+=1;
+            }
 
         }
         /*The player can win a specified amount of chips. win_chips adds the integer argument of
@@ -139,18 +148,26 @@ public class BlackJack{
             }
             return false;
         }
-    }
-    /*
-    public class Dealer{
-        private ArrayList<Card> hand;
-
-        public Dealer(){
-            hand = new ArrayList<Card>();
+        /*
+        * return_score is a method that returns an integer representing the player's score according
+         * to his hand. It does this by adding the values of the weights of each of the cards in his hand
+          * then, if its over 21, it attempts to lower it, by checking for Ace's. If one or more is found,
+          * it decrements the score by 10, until its 21 or under. or it runs out of Aces to apply this to
+        * */
+        public int return_score(){
+            int temp =0;
+         for (int i=0;i< hands.size();i++){
+             temp += hands.get(i).weight[0];
+         }
+            while(temp > 21 && hasAce){
+             temp-=10;
+             numAce-=1;
+             if(numAce ==0){
+                 hasAce = false;
+             }
+            }
+            return temp;
         }
-        public void draw_from(Deck d){
-            hand.add(d.draw());
-
-        }
     }
-    */
+
 }

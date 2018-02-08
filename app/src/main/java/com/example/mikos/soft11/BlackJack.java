@@ -22,12 +22,12 @@ public class BlackJack{
     public class Card{
         private String value;
         private int weight[];
-        private char suit;
+        private String suit;
         /*
         * This is the Constructor for our Card Object, it takes values for the suit, value, as well
         * as an array of values for the weight, and creates a new card from the information.
         * */
-        public Card(String value, char suit, int weight[])
+        public Card(String value, String suit, int weight[])
         {
             this.value = value;
             this.suit = suit;
@@ -52,7 +52,7 @@ public class BlackJack{
         * */
         public Deck()
         {
-            char [] suits = {'S','H','C','D'};
+            String [] suits = {"Spades","Hearts","Clubs","Diamonds"};
             String [] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
             int [][] weights = {{1,11},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
             cards = new ArrayList<>(52);
@@ -95,4 +95,61 @@ public class BlackJack{
                 cards.set(j,temp);
             }
         }
-    }}
+    }
+    /*
+    * The Player object represents someone playing blackjack. A player has a name, an amount of chips
+    * determined by the options menu, and a hand that starts empty. The hand is represented by a 2d
+    * Arraylist of cards, this supports n number of splits.
+    * */
+    public class Player{
+        private String name;
+        private int chips;
+        private ArrayList<ArrayList<Card>> hands;
+        /*
+        * The constructor for player. This creates a player with a blank hand, using a name and a
+        * starting amount of chips
+        * */
+        public Player(String name, int chips){
+            this.name = name;
+            this.chips = chips;
+            hands = new ArrayList<ArrayList<>>();
+        }
+        /*
+        * draw_from is a functions that takes two arguments, A Deck object, and an integer representing
+        * a hand. Draw adds a card from the top of the deck (Using the Decks 'draw' function) and adds
+        * it to the specified hand. It returns nothing.
+        * */
+        public void draw_from(Deck d, int hand){
+            hands.get(hand).add(d.draw());
+
+        }
+        /*The player can win a specified amount of chips. win_chips adds the integer argument of
+        chips to the players total chip count. This function returns nothing*/
+        public void win_chips(int chips){
+            this.chips += chips;
+        }
+        /*Lose chips works inversely from win chips, except it returns a bool. If the amount the
+        player would lose is greater than his chip count, the game returns false, if not, it returns
+        true*/
+        public boolean lose_chips(int chips){
+            if (this.chips>= chips){
+                this.chips -= chips;
+                return true;
+            }
+            return false;
+        }
+    }
+    /*
+    public class Dealer{
+        private ArrayList<Card> hand;
+
+        public Dealer(){
+            hand = new ArrayList<Card>();
+        }
+        public void draw_from(Deck d){
+            hand.add(d.draw());
+
+        }
+    }
+    */
+}

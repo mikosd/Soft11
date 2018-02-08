@@ -5,6 +5,7 @@ import java.util.Random;
 
 /**
  * Created by JohnL on 2/6/2018.
+ * This blackjack class contains clases and functions that can be used to play a cardgame.
  */
 
 

@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
     static final int START_SETTINGS = 1;
+    int chips;
+    String name;
+    BlackJack.Player player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,11 @@ public class MainActivity extends Activity {
         button_about.setOnClickListener(new aboutListener());
         button_settings.setOnClickListener(new settingsListener());
 
+        //BlackJack.Player player= new BlackJack.Player(name,chips);
+        //player.win_chips(100);
+
+        //Toast toast = Toast.makeText(getApplicationContext(), player.return_score(), Toast.LENGTH_SHORT);
+        //toast.show();
 
     }
     @Override
@@ -29,10 +37,14 @@ public class MainActivity extends Activity {
 
         if (requestCode == START_SETTINGS) {
             if(resultCode == Activity.RESULT_OK){
-                String name=data.getStringExtra("name");
-                int chips = data.getIntExtra("chips",1);
+                name=data.getStringExtra("name");
+                chips = data.getIntExtra("chips",1);
 
                 Toast toast = Toast.makeText(getApplicationContext(), name+" "+chips, Toast.LENGTH_SHORT);
+                toast.show();
+                player = new BlackJack.Player(name,chips);
+                player.win_chips(100);
+                toast = Toast.makeText(getApplicationContext(), player.return_score(), Toast.LENGTH_SHORT);
                 toast.show();
             }
             if (resultCode == Activity.RESULT_CANCELED) {

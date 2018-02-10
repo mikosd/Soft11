@@ -102,7 +102,7 @@ public class BlackJack{
     * determined by the options menu, and a hand that starts empty. The hand is represented by a 2d
     * Arraylist of cards, this supports n number of splits.
     * */
-    public class Player{
+    public static class Player{
         private String name;
         private int chips;
         private ArrayList<Card> hands;

@@ -13,11 +13,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.button_play);
+        Button button_start = findViewById(R.id.button_play);
+        Button button_about = findViewById(R.id.button_about);
+        Button button_settings = findViewById(R.id.button_settings);
 
-        findViewById(R.id.button_about).setOnClickListener(new aboutListener());
-
-        button = findViewById(R.id.button_settings);
+        button_about.setOnClickListener(new aboutListener());
+        button_settings.setOnClickListener(new settingsListener());
 
     }
 
@@ -25,8 +26,21 @@ public class MainActivity extends Activity {
 
         @Override
         public void onClick(View view) {
+
             Intent aboutIntent = new Intent(getApplicationContext(),AboutActivity.class);
             startActivity(aboutIntent);
+        }
+    }
+
+
+
+    class settingsListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+
+            Intent settingIntent = new Intent(getApplicationContext(),SettingsActivity.class);
+            startActivity(settingIntent);
         }
     }
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Soft 11</string>
-    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_about">About This Application</string>
+    <string name="textView_info">This application is a simple game of blackjack. The player can bet
+        chips, ask to draw a card, and double down. After the player is satisfied with his hand,
+        he can hold, then the dealers second card is revealed, and the game is decided. This
+        applications was designed, tested and coded by John Litman, Daniel Mikos, and Sasha Pavlovich.</string>
 </resources>

@@ -11,7 +11,7 @@ public class MainActivity extends Activity {
     static final int START_SETTINGS = 1;
     int chips;
     String name;
-    BlackJack.Player player;
+    Player player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,12 +40,11 @@ public class MainActivity extends Activity {
                 name=data.getStringExtra("name");
                 chips = data.getIntExtra("chips",1);
 
-                Toast toast = Toast.makeText(getApplicationContext(), name+" "+chips, Toast.LENGTH_SHORT);
+                player = new Player(name,chips);
+                player.win_chips(1000);
+                Toast toast = Toast.makeText(getApplicationContext(), name+" "+ player.chips, Toast.LENGTH_SHORT);
                 toast.show();
-                player = new BlackJack.Player(name,chips);
-                player.win_chips(100);
-                toast = Toast.makeText(getApplicationContext(), player.return_score(), Toast.LENGTH_SHORT);
-                toast.show();
+
             }
             if (resultCode == Activity.RESULT_CANCELED) {
 

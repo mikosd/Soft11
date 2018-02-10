@@ -19,6 +19,12 @@ public class PlayActivity extends Activity{
         BlackJack.Player dealer;
 
      //   int bet = findViewById(R.id.);
+
+       BlackJack.Player user;
+
+
+
+
     }
 
 

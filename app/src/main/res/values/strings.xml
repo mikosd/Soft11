@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Soft 11</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>

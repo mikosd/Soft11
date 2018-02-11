@@ -13,11 +13,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.button_play);
+        Button button_start = findViewById(R.id.button_play);
 
-        findViewById(R.id.button_about).setOnClickListener(new aboutListener());
+        
 
-        button = findViewById(R.id.button_settings);
+
 
     }
 
@@ -27,6 +27,15 @@ public class MainActivity extends Activity {
         public void onClick(View view) {
             Intent aboutIntent = new Intent(getApplicationContext(),AboutActivity.class);
             startActivity(aboutIntent);
+        }
+    }
+
+    class playListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+            Intent playIntent = new Intent(getApplicationContext(),PlayActivity.class);
+            startActivity(playIntent);
         }
     }
 }

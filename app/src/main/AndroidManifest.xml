@@ -26,6 +26,7 @@
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" />
         <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".PlayActivity"></activity>
     </application>
 
 </manifest>

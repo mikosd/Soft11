@@ -12,16 +12,7 @@ public class AboutActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        findViewById(R.id.button_back).setOnClickListener(new backListener());
-
     }
 
-    class backListener implements View.OnClickListener{
-
-        @Override
-        public void onClick(View view) {
-            finish();
-        }
-    }
 
 }

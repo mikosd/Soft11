@@ -30,12 +30,14 @@ public class SettingsActivity extends Activity {
 
         @Override
         public void onClick(View view) {
-            int chips;
+            int chips = 0;
             String name;
             EditText editText_chips = findViewById(R.id.editText_chips);
             EditText editText_name = findViewById(R.id.editText_name);
             Intent returnIntent = new Intent();
-            chips = Integer.parseInt(editText_chips.getText().toString());
+            if(!editText_chips.getText().toString().equals("")) {
+                chips = Integer.parseInt(editText_chips.getText().toString());
+            }
             if(chips < 1){chips=1;}
             if(chips > 5000){chips = 5000;}
             name = editText_name.getText().toString();

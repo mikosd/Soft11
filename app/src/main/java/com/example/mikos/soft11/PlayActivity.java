@@ -28,10 +28,13 @@ public class PlayActivity extends Activity{
 
         deck.shuffle(); //pre-shuffling deck, seems to work but is  *untested*
         Card drawn = deck.draw();
-        //Log.i("suit", drawn.getSuit());
-        //Log.i("value", drawn.getValue());
-        //Log.i("weight", String.valueOf(drawn.getWeight()));
 
+       /*testing if first card drawn has all of its contents *working*
+
+        Log.i("suit", drawn.getSuit());
+        Log.i("value", drawn.getValue());
+        Log.i("weight", String.valueOf(drawn.getWeight()));
+        */
     }
 
 

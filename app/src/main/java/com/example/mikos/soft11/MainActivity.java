@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 public class MainActivity extends Activity {
     static final int START_SETTINGS = 1;
     int chips;
@@ -37,11 +38,11 @@ public class MainActivity extends Activity {
 
         if (requestCode == START_SETTINGS) {
             if(resultCode == Activity.RESULT_OK){
-                name=data.getStringExtra("name");
+                name = data.getStringExtra("name");
                 chips = data.getIntExtra("chips",1);
 
                 player = new Player(name,chips);
-                player.win_chips(1000);
+                player.win_chips(1000); //this adds 1000 chips on top of our original input, wasn't sure if this is intended
                 Toast toast = Toast.makeText(getApplicationContext(), name+" "+ player.chips, Toast.LENGTH_SHORT);
                 toast.show();
 
@@ -55,8 +56,9 @@ public class MainActivity extends Activity {
 
         @Override
         public void onClick(View view) {
-
+            //passing our whole object over, though the object's name is private
             Intent playIntent = new Intent(getApplicationContext(),PlayActivity.class);
+            playIntent.putExtra("player",player);
             startActivity(playIntent);
         }
     }

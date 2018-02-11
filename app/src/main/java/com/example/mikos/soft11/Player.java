@@ -1,5 +1,6 @@
 package com.example.mikos.soft11;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +12,7 @@ import java.util.ArrayList;
     * Arraylist of cards, this supports n number of splits.
     * */
 
-public class Player{
+public class Player implements Serializable {
     private String name;
     public int chips;
     private ArrayList<Card> hands;

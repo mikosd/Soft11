@@ -2,10 +2,13 @@ package com.example.mikos.soft11;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import static com.example.mikos.soft11.BlackJack.*;
 
 public class PlayActivity extends Activity{
+    Player player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +23,8 @@ public class PlayActivity extends Activity{
 
      //   int bet = findViewById(R.id.);
 
-       BlackJack.Player user;
-
-
-
-
+    player = (Player) getIntent().getSerializableExtra("player");
+    // Log.i("PLAYER", String.valueOf(player.chips)); tested for chip value  *working*
     }
 
 

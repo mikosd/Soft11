@@ -30,7 +30,8 @@ public class Deck{
             {
                 cards.add(new Card(values[j], suits[i], weights[j]));
             }
-        }}
+        }
+    }
 
     /*
     * The draw function removes the top card from the deck, "Drawing" the card involves copying

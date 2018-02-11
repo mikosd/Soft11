@@ -26,7 +26,7 @@ public class PlayActivity extends Activity{
         TextView chip_tv = (TextView)findViewById(R.id.tv_chips);
         chip_tv.setText("Chips: " + player.chips);
 
-        deck.shuffle(); //pre-shuffling deck, *untested*
+        deck.shuffle(); //pre-shuffling deck, seems to work but is  *untested*
         Card drawn = deck.draw();
         //Log.i("suit", drawn.getSuit());
         //Log.i("value", drawn.getValue());

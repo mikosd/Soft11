@@ -66,14 +66,16 @@ public class Player implements Serializable {
     * */
     public int return_score(){
         int temp =0;
+        int tempAce = numAce;
+        boolean tempHasAce = hasAce;
         for (int i=0;i< hands.size();i++){
             temp += hands.get(i).getWeight()[0];
         }
-        while(temp > 21 && hasAce){
+        while(temp > 21 && tempHasAce){
             temp-=10;
-            numAce-=1;
-            if(numAce ==0){
-                hasAce = false;
+            tempAce-=1;
+            if(tempAce ==0){
+                tempHasAce = false;
             }
         }
         return temp;
@@ -85,5 +87,15 @@ public class Player implements Serializable {
 
     public int getChips() {
         return chips;
+    }
+    public Card getFromHand(int index){
+
+        return hands.get(index);
+    }
+    public int getHandSize(){
+        return hands.size();
+    }
+    public void emptyHand(){
+        hands.clear();
     }
 }

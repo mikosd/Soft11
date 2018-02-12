@@ -1,5 +1,7 @@
 package com.example.mikos.soft11;
 
+import android.media.Image;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -18,19 +20,21 @@ public class Deck{
     * collections of suits, values and weights, and iterating through each list, until applicable
     * combinations have been assigned. It takes no arguments, and returns nothing
     * */
-    public Deck()
-    {
-        String [] suits = {"Spades","Hearts","Clubs","Diamonds"};
-        String [] values = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
+    public Deck() {
+        String [] suits = {"s","h","c","d"};
+        String [] values = {"ace","two","three","four","five","six","seven","eight","nine","ten","jack","queen","king"};
         int [][] weights = {{11,1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
+        int [] cardImage = CardImages.class.getResource(values[]+"_"+suits[]);
+
         cards = new ArrayList<>(52);
-        for (int i=0; i < 4;i++)
-        {
-            for (int j=0;j<13;j++)
-            {
-                cards.add(new Card(values[j], suits[i], weights[j]));
+        for (int i=0; i < 4;i++) {
+            for (int j=0;j<13;j++) {
+                cards.add(new Card(values[j], suits[i], weights[j], cardImage[values+"_"+suits]));
             }
         }
+
+
+
     }
 
     /*

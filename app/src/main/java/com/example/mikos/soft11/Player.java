@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Player implements Serializable {
     private String name;
-    public int chips;
+    private int chips;
     private ArrayList<Card> hands;
     private boolean hasAce;
     private int numAce;
@@ -46,14 +46,14 @@ public class Player implements Serializable {
     /*The player can win a specified amount of chips. win_chips adds the integer argument of
     chips to the players total chip count. This function returns nothing*/
     public void win_chips(int chips){
-        this.chips += chips;
+        this.chips = this.getChips() + chips;
     }
     /*Lose chips works inversely from win chips, except it returns a bool. If the amount the
     player would lose is greater than his chip count, the game returns false, if not, it returns
     true*/
     public boolean lose_chips(int chips){
-        if (this.chips>= chips){
-            this.chips -= chips;
+        if (this.getChips() >= chips){
+            this.chips = this.getChips() - chips;
             return true;
         }
         return false;
@@ -77,5 +77,13 @@ public class Player implements Serializable {
             }
         }
         return temp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getChips() {
+        return chips;
     }
 }

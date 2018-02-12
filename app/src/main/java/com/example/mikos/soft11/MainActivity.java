@@ -26,11 +26,6 @@ public class MainActivity extends Activity {
         button_about.setOnClickListener(new aboutListener());
         button_settings.setOnClickListener(new settingsListener());
 
-        //BlackJack.Player player= new BlackJack.Player(name,chips);
-        //player.win_chips(100);
-
-        //Toast toast = Toast.makeText(getApplicationContext(), player.return_score(), Toast.LENGTH_SHORT);
-        //toast.show();
 
     }
     @Override
@@ -42,9 +37,7 @@ public class MainActivity extends Activity {
                 chips = data.getIntExtra("chips",1);
 
                 player = new Player(name,chips);
-                player.win_chips(1000); //this adds 1000 chips on top of our original input, wasn't sure if this is intended
-                Toast toast = Toast.makeText(getApplicationContext(), name+" "+ player.chips, Toast.LENGTH_SHORT);
-                toast.show();
+
 
             }
             if (resultCode == Activity.RESULT_CANCELED) {

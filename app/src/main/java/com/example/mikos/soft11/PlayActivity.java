@@ -12,7 +12,10 @@ public class PlayActivity extends Activity{
 
 
     Player player;
+    Player dealer;
     Deck deck = new Deck();
+    int bet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,17 +27,13 @@ public class PlayActivity extends Activity{
         player = (Player) getIntent().getSerializableExtra("player");
         // Log.i("PLAYER", String.valueOf(player.chips)); tested for chip value  *working*
         TextView chip_tv = (TextView)findViewById(R.id.tv_chips);
-        chip_tv.setText("Chips: " + player.chips);
+        chip_tv.setText("Chips: " + player.getChips());
 
-        deck.shuffle(); //pre-shuffling deck, seems to work but is  *untested*
-        Card drawn = deck.draw();
+        deck.shuffle();
 
-       /*testing if first card drawn has all of its contents *working*
+        dealer.draw_from(deck);
+        dealer.draw_from(deck);
 
-        Log.i("suit", drawn.getSuit());
-        Log.i("value", drawn.getValue());
-        Log.i("weight", String.valueOf(drawn.getWeight()));
-        */
     }
 
 

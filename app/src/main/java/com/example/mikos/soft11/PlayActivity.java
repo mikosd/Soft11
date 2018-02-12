@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class PlayActivity extends Activity{
 
 
-    Player player;
+    Player player = new Player("player", 5000);
     Player dealer;
     Deck deck = new Deck();
     int chipsDown;

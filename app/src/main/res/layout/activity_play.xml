@@ -92,22 +92,53 @@
         android:text="Bet" />
 
     <TextView
-        android:id="@+id/textView_dealerCard"
+        android:id="@+id/tv_dealer_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_chips"
         android:layout_centerHorizontal="true"
-        android:text="Revealed Dealer Card: " />
+        android:text="0" />
 
     <TextView
-        android:id="@+id/textView_player_cards"
+        android:id="@+id/tv_player_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_down"
         android:layout_marginStart="14dp"
-        android:text="TextView"
-        tools:text="Player Cards:" />
+        android:text="0"
+        />
+
+    <ImageView
+        android:id="@+id/iv_player_card_one"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@+id/iv_dealer_card_up"
+        android:layout_alignTop="@+id/button_down"
+        android:src="@drawable/card_back" />
+
+    <ImageView
+        android:id="@+id/iv_player_card_two"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@+id/iv_player_card_one"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/card_back" />
+
+    <ImageView
+        android:id="@+id/iv_dealer_card_down"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@+id/iv_player_card_two"
+        android:layout_below="@+id/tv_player_total"
+        android:src="@drawable/card_back" />
+
+    <ImageView
+        android:id="@+id/iv_dealer_card_up"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@+id/iv_dealer_card_down"
+        android:layout_toEndOf="@+id/tv_dealer_total"
+        android:src="@drawable/card_back" />
 
 
 </RelativeLayout>

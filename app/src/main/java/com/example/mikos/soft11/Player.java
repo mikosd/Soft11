@@ -37,7 +37,7 @@ public class Player implements Serializable {
     public void draw_from(Deck d){
         Card t = d.draw();
         hands.add(t);
-        if(t.getValue().equals("Ace")){
+        if(t.getValue().equals("ace")){
             hasAce = true;
             numAce+=1;
         }

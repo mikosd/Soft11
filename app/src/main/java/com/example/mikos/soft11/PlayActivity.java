@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class PlayActivity extends Activity{
         Button button_inc = findViewById(R.id.button_up);
         Button button_double = findViewById(R.id.button_double);
         Button button_dec = findViewById(R.id.button_down);
-        TextView textView_dealer_revealed_card = findViewById(R.id.textView_dealerCard);
+        ImageView iv_dealer_cardup = findViewById(R.id.iv_dealer_card_up;
         TextView textView_chip = (TextView)findViewById(R.id.tv_chips);
         TextView textView_bet = (TextView)findViewById(R.id.tv_bet);
 
@@ -58,9 +59,12 @@ public class PlayActivity extends Activity{
         dealer.draw_from(deck);
         dealer.draw_from(deck);
 
-        textView_dealer_revealed_card.setText("Dealer Revealed Card: "+ dealer.getFromHand(0).getValue()+" of " + dealer.getFromHand(0).getSuit());
+
+
+       /* textView_dealer_revealed_card.setText("Dealer Revealed Card: "+ dealer.getFromHand(0).getValue()+" of " + dealer.getFromHand(0).getSuit());
         Toast.makeText(getApplicationContext(), "Place Your Bet", Toast.LENGTH_SHORT).show();
         canBet = true;
+        */
     }
 
 

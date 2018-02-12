@@ -1,8 +1,5 @@
 package com.example.mikos.soft11;
 
-import android.media.Image;
-import com.example.mikos.soft11.CardImages;
-
 /**
  * Created by JohnL on 2/10/2018.
  */
@@ -21,7 +18,7 @@ public class Card{
     * This is the Constructor for our Card Object, it takes values for the suit, value, as well
     * as an array of values for the weight, and creates a new card from the information.
     * */
-    public Card(String value, String suit, int weight[], int cardImage[]) {
+    public Card(String value, String suit, int[] weight, int cardImage) {
         this.value = value;
         this.suit = suit;
         this.weight = weight;
@@ -47,5 +44,6 @@ public class Card{
     public int[] getCardImage() {return cardImage;}
 
 }
+
 
 

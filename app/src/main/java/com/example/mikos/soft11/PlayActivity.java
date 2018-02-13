@@ -53,6 +53,7 @@ public class PlayActivity extends Activity{
         // Log.i("PLAYER", String.valueOf(player.chips)); tested for chip value  *working*
         textView_chip.setText("Chips: " + player.getChips());
 
+        
 
 
         deck.shuffle();

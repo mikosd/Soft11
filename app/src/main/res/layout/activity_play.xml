@@ -106,8 +106,33 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button_down"
         android:layout_marginStart="14dp"
-        android:text="TextView"
+        android:text=""
         tools:text="Player Cards:" />
+
+    <ImageView
+        android:id="@+id/chip_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_chips"
+        android:src="@drawable/chip_logo" />
+
+    <ImageView
+        android:id="@+id/dealer_card_1"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@+id/textView_dealerCard"
+        android:layout_below="@+id/textView_dealerCard"
+        android:src="@drawable/card_back"
+        />
+    <ImageView
+        android:id="@+id/dealer_card_2"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_toRightOf="@id/dealer_card_1"
+        android:layout_below="@+id/textView_dealerCard"
+        android:src="@drawable/card_back"
+        />
 
 
 </RelativeLayout>

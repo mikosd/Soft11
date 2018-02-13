@@ -13,7 +13,7 @@ public class Card{
     private String value;
     private int[] weight;
     private String suit;
-    private int[] cardImage;
+    private int cardImage;
     /*
     * This is the Constructor for our Card Object, it takes values for the suit, value, as well
     * as an array of values for the weight, and creates a new card from the information.
@@ -41,7 +41,7 @@ public class Card{
         return suit;
     }
 
-    public int[] getCardImage() {return cardImage;}
+    public int getCardImage() {return cardImage;}
 
 }
 

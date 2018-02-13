@@ -13,16 +13,23 @@ public class Card{
     private String value;
     private int[] weight;
     private String suit;
+<<<<<<< HEAD
     private int cardImage;
+=======
+>>>>>>> parent of 8b262fb... trying to add card images
     /*
     * This is the Constructor for our Card Object, it takes values for the suit, value, as well
     * as an array of values for the weight, and creates a new card from the information.
     * */
+<<<<<<< HEAD
     public Card(String value, String suit, int[] weight, int cardImage) {
+=======
+    public Card(String value, String suit, int weight[])
+    {
+>>>>>>> parent of 8b262fb... trying to add card images
         this.value = value;
         this.suit = suit;
         this.weight = weight;
-        this.cardImage = cardImage;
     }
     /*
     * This is the default constructor for the Card Object, it simply creates a blank card
@@ -40,6 +47,7 @@ public class Card{
     public String getSuit() {
         return suit;
     }
+<<<<<<< HEAD
 
     public int getCardImage() {return cardImage;}
 
@@ -47,3 +55,6 @@ public class Card{
 
 
 
+=======
+}
+>>>>>>> parent of 8b262fb... trying to add card images

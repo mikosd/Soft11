@@ -1,7 +1,5 @@
 package com.example.mikos.soft11;
 
-import android.media.Image;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -24,6 +22,7 @@ public class Deck{
         String [] suits = {"s","h","c","d"};
         String [] values = {"ace","two","three","four","five","six","seven","eight","nine","ten","jack","queen","king"};
         int [][] weights = {{11,1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
+<<<<<<< HEAD
         int[] cardImages = new int[]{
                 /////////////////Spades////////////////
                 R.drawable.ace_s, R.drawable.king_s, R.drawable.queen_s,
@@ -57,11 +56,16 @@ public class Deck{
             for (int j=0;j<13;j++) {
                 cards.add(new Card(values[j], suits[i], weights[j], cardImages[cardCount]));
                 cardCount--;
+=======
+        cards = new ArrayList<>(52);
+        for (int i=0; i < 4;i++)
+        {
+            for (int j=0;j<13;j++)
+            {
+                cards.add(new Card(values[j], suits[i], weights[j]));
+>>>>>>> parent of 8b262fb... trying to add card images
             }
         }
-
-
-
     }
 
     /*

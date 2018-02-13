@@ -51,13 +51,7 @@ public class MainActivity extends Activity {
         public void onClick(View view) {
             //passing our whole object over, though the object's name is private
             Intent playIntent = new Intent(getApplicationContext(),PlayActivity.class);
-            if (player != null) {
-                playIntent.putExtra("player",player);
-            }
-            else {
-                player = new Player("player", 0);
-                playIntent.putExtra("player",player);
-            }
+            playIntent.putExtra("player",player);
             startActivity(playIntent);
         }
     }

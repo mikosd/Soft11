@@ -18,52 +18,17 @@ public class Deck{
     * collections of suits, values and weights, and iterating through each list, until applicable
     * combinations have been assigned. It takes no arguments, and returns nothing
     * */
-    public Deck() {
-        String [] suits = {"s","h","c","d"};
-        String [] values = {"ace","two","three","four","five","six","seven","eight","nine","ten","jack","queen","king"};
+    public Deck()
+    {
+        String [] suits = {"Spades","Hearts","Clubs","Diamonds"};
+        String [] values = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
         int [][] weights = {{11,1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{10},{10},{10}};
-<<<<<<< HEAD
-        int[] cardImages = new int[]{
-                /////////////////Spades////////////////
-                R.drawable.ace_s, R.drawable.king_s, R.drawable.queen_s,
-                R.drawable.jack_s, R.drawable.ten_s, R.drawable.nine_s,
-                R.drawable.eight_s, R.drawable.seven_s, R.drawable.six_s,
-                R.drawable.five_s, R.drawable.four_s, R.drawable.three_s,
-                R.drawable.two_s,
-                //////////////////Hearts////////////////////////////
-                R.drawable.ace_h, R.drawable.king_h, R.drawable.queen_h,
-                R.drawable.jack_h, R.drawable.ten_h, R.drawable.nine_h,
-                R.drawable.eight_h, R.drawable.seven_h, R.drawable.six_h,
-                R.drawable.five_h, R.drawable.four_h, R.drawable.three_h,
-                R.drawable.two_h,
-                /////////////////Clubs//////////////////////////////
-                R.drawable.ace_c, R.drawable.king_c, R.drawable.queen_c,
-                R.drawable.jack_c, R.drawable.ten_c, R.drawable.nine_c,
-                R.drawable.eight_c, R.drawable.seven_c, R.drawable.six_c,
-                R.drawable.five_c, R.drawable.four_c, R.drawable.three_c,
-                R.drawable.two_c,
-                ////////////////Diamonds///////////////////////////
-                R.drawable.ace_d, R.drawable.king_d, R.drawable.queen_d,
-                R.drawable.jack_d, R.drawable.ten_d, R.drawable.nine_d,
-                R.drawable.eight_d, R.drawable.seven_d, R.drawable.six_d,
-                R.drawable.five_d, R.drawable.four_d, R.drawable.three_d,
-                R.drawable.two_d
-        };
-
-        cards = new ArrayList<>(52);
-        int cardCount = 52;
-        for (int i=0; i < 4;i++) {
-            for (int j=0;j<13;j++) {
-                cards.add(new Card(values[j], suits[i], weights[j], cardImages[cardCount]));
-                cardCount--;
-=======
         cards = new ArrayList<>(52);
         for (int i=0; i < 4;i++)
         {
             for (int j=0;j<13;j++)
             {
                 cards.add(new Card(values[j], suits[i], weights[j]));
->>>>>>> parent of 8b262fb... trying to add card images
             }
         }
     }
